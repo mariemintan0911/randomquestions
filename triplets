@@ -1,0 +1,46 @@
+"""
+Created on Wed Jul 29 17:42:29 2020
+
+My friend gave an interesting question today, Write a function find_if_triplet(), which receives a single parameter, my_list, 
+a list of integers, with values in ascending order.
+The function returns a single boolean, has_triplet, which is set to True if an element of the list my_list appears at least three times.
+It returns False otherwise.
+
+For instance,
+
+if my_list = [1,1,1], the function should return has_triplet = True,
+if my_list = [1,2,3,3,3], the function should return has_triplet = True,
+if my_list = [1,2,2,2,2,3], the function should return has_triplet = True,
+if my_list = [1,2,2,3,4,4,5], the function should return has_triplet = False.
+"""
+"""
+thought process:
+    I will have to define the function find_if_triplet(), possibly use  dictionary to keep track of the freq and number?
+"""
+my_list = input('please type a list of integers with [] brackets : ')
+def find_if_triplet(my_list):
+    mydict = {}
+    # iterates over each element in list
+    for int in my_list:
+        if int in mydict:
+            mydict[int] += 1
+        else:
+            mydict[int] = 1 
+            #adds into dict if its not alr in
+    return mydict
+    #return back to program? to store? is this the correct term?
+def has_triplet(freqs):
+    values = freqs.values() #is this a list?
+    for n in freqs:
+      if values == 3:
+        return True
+      elif values != 3:
+        return False
+      else:
+        return False
+if True:
+    print("has_triplet = True")
+if False:
+    print("has_triplet = False")
+    
+  # i know there is a mistake somewhere becasue it only prints "True" but I am not too sure how to resolve it
